@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JC — Aerospace Engineering Portfolio</title>
+<meta name="description" content="Portfolio of JC, Aerospace Engineering student focused on fluids and aerodynamics.">
+
+<!-- Fonts: Space Grotesk for headings (technical/geometric), Inter for body, IBM Plex Mono for data labels -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- TOP NAVIGATION / TABS                                         -->
+<!-- ============================================================ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#summary" class="logo" data-tab-target="summary">JC<span class="logo-dot">.</span></a>
+
+    <nav class="tabs" role="tablist" aria-label="Portfolio sections">
+      <button class="tab-btn is-active" role="tab" aria-selected="true" aria-controls="summary" data-tab-target="summary">Summary</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="skills" data-tab-target="skills">Skills</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="projects" data-tab-target="projects">Projects</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="experience" data-tab-target="experience">Experience</button>
+    </nav>
+
+    <!-- UPDATE_ME: point this at your actual resume PDF, or remove the button if you don't have one yet -->
+    <a class="resume-btn" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============================================================ -->
+  <!-- SUMMARY                                                       -->
+  <!-- ============================================================ -->
+  <section id="summary" class="tab-panel is-active" role="tabpanel">
+    <div class="hero">
+      <div class="hero-copy">
+        <!-- UPDATE_ME: replace src with your own photo. Recommended: a square image, at least 300x300px -->
+        <img class="hero-photo" src="assets/photo.jpg" alt="Photo of JC" width="88" height="88" onerror="this.style.display='none'">
+        <p class="eyebrow">Aerospace Engineering &mdash; Fluids &amp; Aerodynamics</p>
+        <h1 class="hero-title">Hi, I'm JC.</h1>
+        <p class="hero-lede">
+          <!-- UPDATE_ME: rewrite this short bio in your own voice -->
+          I'm a 2nd-year Aerospace Engineering student at
+          <strong>[UPDATE_ME: XX University]</strong>, drawn to the way air moves
+          around a shape and what that means for how things fly. I spend most of
+          my time thinking about fluid dynamics, airfoil behavior, and the kind of
+          problems that only make sense once you see the flow field.
+        </p>
+
+        <div class="hero-actions">
+          <!-- UPDATE_ME: replace with your real email / LinkedIn / GitHub -->
+          <a class="btn btn-primary" href="mailto:UPDATE_ME@example.com">Email me</a>
+          <a class="btn btn-ghost" href="https://linkedin.com/in/UPDATE_ME" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/UPDATE_ME" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Signature visual: streamlines flowing over a simple airfoil cross-section -->
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 480 320" class="airfoil-svg">
+          <!-- airfoil silhouette -->
+          <path class="airfoil-body" d="M40,170 C110,120 260,110 430,150 C300,175 150,190 40,170 Z"></path>
+          <!-- streamlines -->
+          <path class="streamline s1" d="M0,60 C120,60 160,90 240,90 C340,90 380,60 480,60"></path>
+          <path class="streamline s2" d="M0,110 C120,110 170,130 240,128 C330,126 380,105 480,105"></path>
+          <path class="streamline s3" d="M0,230 C120,230 170,205 240,200 C330,196 380,215 480,215"></path>
+          <path class="streamline s4" d="M0,270 C120,270 160,250 240,248 C330,246 380,262 480,262"></path>
+        </svg>
+      </div>
+    </div>
+
+    <div class="quick-facts">
+      <div class="fact">
+        <span class="fact-label">University</span>
+        <!-- UPDATE_ME -->
+        <span class="fact-value">XX University</span>
+      </div>
+      <div class="fact">
+        <span class="fact-label">Program</span>
+        <span class="fact-value">B.Eng Aerospace Engineering</span>
+      </div>
+      <div class="fact">
+        <span class="fact-label">Year</span>
+        <span class="fact-value">2nd Year</span>
+      </div>
+      <div class="fact">
+        <span class="fact-label">Focus</span>
+        <span class="fact-value">Fluid Dynamics &amp; Aerodynamics</span>
+      </div>
+      <div class="fact">
+        <span class="fact-label">Based in</span>
+        <!-- UPDATE_ME -->
+        <span class="fact-value">UPDATE_ME: City, Country</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SKILLS                                                        -->
+  <!-- ============================================================ -->
+  <section id="skills" class="tab-panel" role="tabpanel" hidden>
+    <h2 class="section-title">Skills</h2>
+    <p class="section-lede">A working toolkit, organized by how I actually use it.</p>
+
+    <div class="skill-groups">
+
+      <div class="skill-group">
+        <h3 class="skill-group-title">Aerodynamics &amp; Fluids</h3>
+        <!-- UPDATE_ME: adjust these tags to match what you've actually studied / used -->
+        <ul class="tag-list">
+          <li class="tag">Boundary Layer Theory</li>
+          <li class="tag">Airfoil Analysis</li>
+          <li class="tag">Compressible Flow</li>
+          <li class="tag">Wind Tunnel Testing</li>
+          <li class="tag">CFD Fundamentals</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-group-title">Software &amp; Tools</h3>
+        <ul class="tag-list">
+          <li class="tag">MATLAB</li>
+          <li class="tag">Python</li>
+          <li class="tag">SolidWorks</li>
+          <li class="tag">ANSYS Fluent</li>
+          <li class="tag">XFOIL</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-group-title">Engineering Fundamentals</h3>
+        <ul class="tag-list">
+          <li class="tag">Statics &amp; Dynamics</li>
+          <li class="tag">Thermodynamics</li>
+          <li class="tag">Materials Science</li>
+          <li class="tag">Calculus &amp; Diff. Eq.</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-group-title">Other</h3>
+        <ul class="tag-list">
+          <li class="tag">Technical Writing</li>
+          <li class="tag">Team Collaboration</li>
+          <!-- UPDATE_ME: add languages, clubs skills, etc. -->
+          <li class="tag">UPDATE_ME</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PROJECTS                                                      -->
+  <!-- ============================================================ -->
+  <section id="projects" class="tab-panel" role="tabpanel" hidden>
+    <h2 class="section-title">Projects</h2>
+    <p class="section-lede">Things I've built, tested, or broken along the way.</p>
+
+    <div class="project-grid">
+
+      <!-- PAPER example — for anything you've written. Duplicate for each paper. -->
+      <article class="project-card">
+        <div class="project-card-head">
+          <span class="project-index">01</span>
+          <span class="project-tag">Paper</span>
+        </div>
+        <h3 class="project-title">UPDATE_ME: Paper Title</h3>
+        <p class="project-desc">
+          UPDATE_ME: what question the paper explored, your approach, and
+          what you found or concluded.
+        </p>
+        <ul class="project-stack">
+          <li>Independent research</li>
+        </ul>
+        <!-- UPDATE_ME: link to a PDF, Google Doc, or write-up -->
+        <a class="project-link" href="#" target="_blank" rel="noopener">Read the paper &rarr;</a>
+      </article>
+
+      <!-- BUILD example — for anything physical or coded you made. Duplicate as needed. -->
+      <article class="project-card">
+        <div class="project-card-head">
+          <span class="project-index">02</span>
+          <span class="project-tag">Build</span>
+        </div>
+        <h3 class="project-title">UPDATE_ME: Build Title</h3>
+        <p class="project-desc">
+          UPDATE_ME: what you built, why, and what you learned getting it
+          to work.
+        </p>
+        <ul class="project-stack">
+          <li>SolidWorks</li>
+          <li>Python</li>
+        </ul>
+        <!-- UPDATE_ME: link to a repo, photos, or write-up -->
+        <a class="project-link" href="#" target="_blank" rel="noopener">View project &rarr;</a>
+      </article>
+
+      <!-- Add more cards as needed — copy either block above -->
+      <article class="project-card">
+        <div class="project-card-head">
+          <span class="project-index">03</span>
+          <span class="project-tag">UPDATE_ME</span>
+        </div>
+        <h3 class="project-title">UPDATE_ME: Title</h3>
+        <p class="project-desc">
+          UPDATE_ME: one or two sentences on what it was and what your role
+          was.
+        </p>
+        <ul class="project-stack">
+          <li>UPDATE_ME</li>
+        </ul>
+        <a class="project-link" href="#" target="_blank" rel="noopener">View project &rarr;</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- EXPERIENCE                                                    -->
+  <!-- ============================================================ -->
+  <section id="experience" class="tab-panel" role="tabpanel" hidden>
+    <h2 class="section-title">Experience</h2>
+    <p class="section-lede">Education, internships, and clubs, in order.</p>
+
+    <ol class="timeline">
+
+      <!-- UPDATE_ME: duplicate this li for each role / involvement -->
+      <li class="timeline-item">
+        <div class="timeline-when">UPDATE_ME: 2025 &ndash; Present</div>
+        <div class="timeline-body">
+          <h3 class="timeline-title">UPDATE_ME: Role / Position</h3>
+          <p class="timeline-org">UPDATE_ME: Organization or Club Name</p>
+          <ul class="timeline-points">
+            <li>UPDATE_ME: what you did, briefly and specifically.</li>
+            <li>UPDATE_ME: a second point, ideally with a result or number.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-when">UPDATE_ME: 2024 &ndash; 2025</div>
+        <div class="timeline-body">
+          <h3 class="timeline-title">UPDATE_ME: Role / Position</h3>
+          <p class="timeline-org">UPDATE_ME: Organization or Club Name</p>
+          <ul class="timeline-points">
+            <li>UPDATE_ME: what you did, briefly and specifically.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <div class="timeline-when">2024</div>
+        <div class="timeline-body">
+          <h3 class="timeline-title">Started B.Eng Aerospace Engineering</h3>
+          <!-- UPDATE_ME -->
+          <p class="timeline-org">XX University</p>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>
+    <!-- UPDATE_ME: swap in your real contact email -->
+    Let's talk aerodynamics &mdash; <a href="mailto:UPDATE_ME@example.com">UPDATE_ME@example.com</a>
+  </p>
+  <p class="footer-meta">&copy; <span id="year"></span> JC. Built with plain HTML, CSS &amp; JS.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
