@@ -16,27 +16,44 @@
 <body>
 
 <!-- ============================================================ -->
-<!-- TOP NAVIGATION / TABS                                         -->
+<!-- CONTACT BAR — quick hotlinks, always visible below the tabs   -->
 <!-- ============================================================ -->
-<header class="site-header">
-  <div class="header-inner">
-    <a href="#summary" class="logo" data-tab-target="summary">JC<span class="logo-dot">.</span></a>
- 
-    <nav class="tabs" role="tablist" aria-label="Portfolio sections">
-      <button class="tab-btn is-active" role="tab" aria-selected="true" aria-controls="summary" data-tab-target="summary">Summary</button>
-      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="skills" data-tab-target="skills">Skills</button>
-      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="projects" data-tab-target="projects">Projects</button>
-      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="experience" data-tab-target="experience">Experience</button>
-    </nav>
- 
-    <!-- UPDATE_ME: point this at your actual resume PDF, or remove the button if you don't have one yet -->
-    <a class="resume-btn" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
- 
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
+<div class="contact-bar">
+  <ul class="contact-list">
+    <!-- UPDATE_ME: replace with your real email / LinkedIn / GitHub -->
+    <li>
+      <a href="mailto:mrjustinchee@gmail.com">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+          <path d="M3.5 6.5L12 13L20.5 6.5"></path>
+        </svg>
+        Email
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/justin-chee-0b5a51318" target="_blank" rel="noopener">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+          <line x1="7.5" y1="10" x2="7.5" y2="16.5"></line>
+          <circle cx="7.5" cy="6.8" r="0.9" fill="currentColor" stroke="none"></circle>
+          <path d="M11.5 16.5V12.8C11.5 11.3 12.4 10.3 13.7 10.3C15 10.3 15.8 11.2 15.8 12.8V16.5"></path>
+          <line x1="11.5" y1="10" x2="11.5" y2="16.5"></line>
+        </svg>
+        LinkedIn
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/UPDATE_ME" target="_blank" rel="noopener">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <polyline points="9 8 5 12 9 16"></polyline>
+          <polyline points="15 8 19 12 15 16"></polyline>
+          <line x1="13" y1="6" x2="11" y2="18"></line>
+        </svg>
+        GitHub
+      </a>
+    </li>
+  </ul>
+</div>
   
 <!-- ============================================================ -->
 <!-- CONTACT BAR — quick hotlinks, always visible below the tabs   -->
