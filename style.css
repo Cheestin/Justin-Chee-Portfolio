@@ -145,7 +145,16 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   font-family: var(--font-mono);
   font-size: 0.82rem;
   color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
   transition: color 0.15s ease;
+}
+
+.contact-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
 }
 
 .contact-list a:hover { color: var(--accent-ink); }
@@ -196,12 +205,12 @@ main {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 48px;
-  align-items: start;
+  align-items: center;
   padding-top: 24px;
 }
 
 .hero-photo-wrap {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1 / 1;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--line);
