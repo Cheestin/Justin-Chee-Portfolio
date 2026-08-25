@@ -27,6 +27,7 @@
       <button class="tab-btn" role="tab" aria-selected="false" aria-controls="skills" data-tab-target="skills">Skills</button>
       <button class="tab-btn" role="tab" aria-selected="false" aria-controls="projects" data-tab-target="projects">Projects</button>
       <button class="tab-btn" role="tab" aria-selected="false" aria-controls="experience" data-tab-target="experience">Experience</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="contact" data-tab-target="contact">Contact</button>
     </nav>
  
     <!-- UPDATE_ME: point this at your actual resume PDF, or remove the button if you don't have one yet -->
@@ -37,7 +38,7 @@
     </button>
   </div>
 </header>
-  
+ 
 <!-- ============================================================ -->
 <!-- CONTACT BAR — quick hotlinks, always visible below the tabs   -->
 <!-- ============================================================ -->
@@ -290,7 +291,33 @@
 
     </ol>
   </section>
-
+ <!-- ============================================================ -->
+  <!-- CONTACT                                                       -->
+  <!-- ============================================================ -->
+  <section id="contact" class="tab-panel" role="tabpanel" hidden>
+    <h2 class="section-title">Contact</h2>
+    <p class="section-lede">Got a question, opportunity, or just want to talk aerodynamics? Send a message below.</p>
+    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xeajbpgw" method="POST">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+      </div>
+ 
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+ 
+      <div class="form-row">
+        <label for="message">Query</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+ 
+      <button type="submit" class="btn btn-primary form-submit">Send message</button>
+ 
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
 </main>
 
 <footer class="site-footer">
