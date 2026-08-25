@@ -116,6 +116,40 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .resume-btn:hover { background: var(--ink); color: var(--surface); }
 
+/* Contact bar — slim strip of hotlinks under the header */
+.contact-bar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-list {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: flex;
+  gap: 14px;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-list li:not(:first-child)::before {
+  content: '|';
+  color: var(--line);
+}
+
+.contact-list a {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--muted);
+  transition: color 0.15s ease;
+}
+
+.contact-list a:hover { color: var(--accent-ink); }
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -162,12 +196,12 @@ main {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 48px;
-  align-items: start;
+  align-items: center;
   padding-top: 24px;
 }
 
 .hero-photo-wrap {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1 / 1;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--line);
