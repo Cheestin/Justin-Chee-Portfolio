@@ -476,13 +476,52 @@ main {
 }
 
 /* =================================================================
-   CONTACT FORM
+   CONTACT
    ================================================================= */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 56px;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.contact-hero-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.contact-hero-lede {
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 34ch;
+}
+
+.contact-form-wrap {
+  width: 100%;
+}
+
 .contact-form {
-  max-width: 520px;
+  width: 100%;
+  max-width: none;
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.form-row-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.required-tag {
+  text-transform: none;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0;
 }
 
 .form-row {
@@ -554,6 +593,7 @@ main {
   .fact:nth-child(3) { border-left: none; }
   .skill-groups { grid-template-columns: 1fr; }
   .project-grid { grid-template-columns: 1fr; }
+  .contact-layout { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px) {
@@ -574,4 +614,5 @@ main {
 
 @media (max-width: 480px) {
   .quick-facts { grid-template-columns: 1fr 1fr; }
+  .form-row-group { grid-template-columns: 1fr; }
 }
