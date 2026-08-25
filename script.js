@@ -59,6 +59,48 @@ navToggle.addEventListener('click', () => {
 });
 
 // =====================================================================
+// Contact form — submits via fetch so the page never navigates away.
+// Requires a Formspree endpoint set in the form's action="" attribute
+// in index.html. See the comment above the form for setup steps.
+// =====================================================================
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const submitBtn = contactForm.querySelector('.form-submit');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    formStatus.textContent = '';
+    formStatus.className = 'form-status';
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' },
+      });
+
+      if (response.ok) {
+        formStatus.textContent = "Thanks — your message has been sent. I'll get back to you soon.";
+        formStatus.classList.add('is-success');
+        contactForm.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (err) {
+      formStatus.textContent = 'Something went wrong sending that — please try again, or email me directly.';
+      formStatus.classList.add('is-error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send message';
+    }
+  });
+}
+
+// =====================================================================
 // Footer year
 // =====================================================================
 document.getElementById('year').textContent = new Date().getFullYear();
