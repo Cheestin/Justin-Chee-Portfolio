@@ -482,7 +482,7 @@ main {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   gap: 56px;
-  align-items: center;
+  align-items: start;
   min-height: 60vh;
 }
 
