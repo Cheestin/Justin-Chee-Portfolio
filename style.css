@@ -499,6 +499,37 @@ main {
   max-width: 34ch;
 }
 
+.contact-info-list {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  max-width: 34ch;
+}
+
+.contact-info-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-info-list li:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.contact-info-list .contact-icon {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.contact-info-list a {
+  font-size: 0.92rem;
+  color: var(--ink);
+  word-break: break-word;
+}
+.contact-info-list a:hover { color: var(--accent-ink); }
+
 .contact-form-wrap {
   width: 100%;
 }
