@@ -159,37 +159,26 @@ main {
    SUMMARY / HERO
    ================================================================= */
 .hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
   padding-top: 24px;
 }
 
-.hero-simple {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-simple .hero-copy {
-  max-width: 56ch;
-}
-
-.hero-simple .hero-lede {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-simple .hero-actions {
-  justify-content: center;
+.hero-photo-wrap {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
 }
 
 .hero-photo {
   display: block;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border: 1px solid var(--line);
-  margin: 0 auto 24px;
-  background: var(--surface);
 }
 
 .eyebrow {
@@ -202,9 +191,9 @@ main {
 }
 
 .hero-title {
-  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 700;
-  line-height: 1.05;
+  line-height: 1.1;
   margin-bottom: 20px;
 }
 
@@ -460,6 +449,8 @@ main {
    RESPONSIVE
    ================================================================= */
 @media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-photo-wrap { order: -1; max-width: 320px; margin: 0 auto; }
   .quick-facts { grid-template-columns: repeat(2, 1fr); }
   .fact:nth-child(3) { border-left: none; }
   .skill-groups { grid-template-columns: 1fr; }
