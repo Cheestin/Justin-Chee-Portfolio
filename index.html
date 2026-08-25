@@ -44,15 +44,13 @@
   <!-- SUMMARY                                                       -->
   <!-- ============================================================ -->
   <section id="summary" class="tab-panel is-active" role="tabpanel">
-    <div class="hero hero-simple">
+    <div class="hero">
       <div class="hero-copy">
-        <!-- UPDATE_ME: replace src with your own photo. Recommended: a square image, at least 400x400px -->
-        <img class="hero-photo" src="assets/photo.jpg" alt="Photo of JC" width="140" height="140" onerror="this.style.display='none'">
         <p class="eyebrow">Aerospace Engineering &mdash; Fluids &amp; Aerodynamics</p>
-        <h1 class="hero-title">Hello, I am Justin Chee</h1>
+        <h1 class="hero-title">Hi, I'm Justin Chee.</h1>
         <p class="hero-lede">
           <!-- UPDATE_ME: rewrite this short bio in your own voice -->
-          A 2nd-year Aerospace Engineering student at University of Bristol.
+          A 2nd-year Aerospace Engineering student at <strong>University of Bristol<strong>.
           Welcome to my personal portfolio website, where you can find information regarding my experience, projects and how to get in touch with me.
           Having always had an interest in aircraft, cars and airflow since young, I chose to study a course where my interests aligned hence my Aerospace Engineering degree.
 
@@ -65,9 +63,14 @@
           <a class="btn btn-ghost" href="https://github.com/UPDATE_ME" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
+
+      <!-- UPDATE_ME: replace src with your own photo. Recommended: a square image, at least 500x500px -->
+      <div class="hero-photo-wrap">
+        <img class="hero-photo" src="assets/photo.jpg" alt="Photo of JC" onerror="this.closest('.hero-photo-wrap').style.display='none'">
+      </div>
     </div>
 
-    <div class="quick-facts">
+   <div class="quick-facts">
       <div class="fact">
         <span class="fact-label">University</span>
         <span class="fact-value">University of Bristol</span>
@@ -252,6 +255,7 @@
           <p class="timeline-org">University of Bristol</p>
         </div>
       </li>
+
 
     </ol>
   </section>
