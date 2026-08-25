@@ -159,21 +159,36 @@ main {
    SUMMARY / HERO
    ================================================================= */
 .hero {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
-  align-items: center;
   padding-top: 24px;
+}
+
+.hero-simple {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-simple .hero-copy {
+  max-width: 56ch;
+}
+
+.hero-simple .hero-lede {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-simple .hero-actions {
+  justify-content: center;
 }
 
 .hero-photo {
   display: block;
-  width: 88px;
-  height: 88px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid var(--line);
-  margin-bottom: 20px;
+  margin: 0 auto 24px;
   background: var(--surface);
 }
 
@@ -227,62 +242,6 @@ main {
   color: var(--ink);
 }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent-ink); }
-
-.hero-visual {
-  aspect-ratio: 3 / 2;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.geo-svg { width: 100%; height: 100%; }
-
-.geo-dots circle {
-  fill: var(--line);
-}
-
-.geo-line {
-  stroke: var(--line);
-  stroke-width: 1;
-}
-
-.geo-ring {
-  fill: none;
-  stroke: var(--accent);
-  stroke-width: 1.4;
-}
-
-.geo-ring-outer {
-  opacity: 0.5;
-  stroke-dasharray: 3 6;
-  transform-origin: 240px 160px;
-  animation: spin 40s linear infinite;
-}
-
-.geo-ring-inner {
-  opacity: 0.9;
-  stroke: var(--accent-ink);
-}
-
-.geo-orbit-dot {
-  fill: var(--accent);
-  transform-origin: 240px 160px;
-  animation: spin 40s linear infinite;
-}
-
-.geo-core {
-  fill: var(--ink);
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .geo-ring-outer,
-  .geo-orbit-dot { animation: none; }
-}
 
 /* Quick facts strip */
 .quick-facts {
@@ -501,7 +460,6 @@ main {
    RESPONSIVE
    ================================================================= */
 @media (max-width: 860px) {
-  .hero { grid-template-columns: 1fr; }
   .quick-facts { grid-template-columns: repeat(2, 1fr); }
   .fact:nth-child(3) { border-left: none; }
   .skill-groups { grid-template-columns: 1fr; }
