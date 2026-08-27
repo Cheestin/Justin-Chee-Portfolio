@@ -103,6 +103,23 @@ if (contactForm) {
 }
 
 // =====================================================================
+// Projects row — redirects normal vertical scroll into horizontal scroll
+// while the cursor is over the row, instead of scrolling the page.
+// =====================================================================
+const projectGrid = document.querySelector('.project-grid');
+
+if (projectGrid) {
+  projectGrid.addEventListener('wheel', (e) => {
+    // Only take over vertical scroll gestures; let horizontal trackpad
+    // swipes pass through untouched.
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      e.preventDefault();
+      projectGrid.scrollLeft += e.deltaY;
+    }
+  }, { passive: false });
+}
+
+// =====================================================================
 // Footer year
 // =====================================================================
 document.getElementById('year').textContent = new Date().getFullYear();
