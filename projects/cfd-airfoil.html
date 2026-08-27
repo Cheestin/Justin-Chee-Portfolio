@@ -1,1 +1,104 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- UPDATE_ME: change this title for each project -->
+<title>UPDATE_ME: Project Title — JC</title>
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+ 
+<!-- Note the ../ — this file lives in /projects/, one folder below the main site -->
+<link rel="stylesheet" href="../style.css">
+ 
+<!-- model-viewer: renders an interactive 3D model (.glb/.gltf) with no backend needed -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+ 
+<!-- Slim header — just a way back to the main site, not the full tab nav -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html#projects" class="logo">JC<span class="logo-dot">.</span></a>
+    <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
+  </div>
+</header>
+ 
+<main class="project-page">
+ 
+  <!-- ============================================================ -->
+  <!-- OVERVIEW                                                      -->
+  <!-- ============================================================ -->
+  <section class="project-page-header">
+    <!-- UPDATE_ME -->
+    <span class="project-tag">Paper</span>
+    <h1 class="project-page-title">UPDATE_ME: Project Title</h1>
+    <p class="project-page-overview">
+      UPDATE_ME: a fuller overview than the card gave — what the project was,
+      why you did it, your approach, and what you found or built. A paragraph
+      or two is fine here since this page has room to breathe.
+    </p>
+    <ul class="project-stack">
+      <li>UPDATE_ME</li>
+      <li>UPDATE_ME</li>
+    </ul>
+  </section>
+ 
+  <!-- ============================================================ -->
+  <!-- 3D MODEL                                                      -->
+  <!-- Export your CAD model from Fusion 360 as .glb or .gltf, and   -->
+  <!-- drop the file into /assets/models/. Update the src path below.-->
+  <!-- If this project has no 3D model, delete this whole <section>. -->
+  <!-- ============================================================ -->
+  <section class="project-page-section">
+    <h2 class="project-page-subhead">3D Model</h2>
+    <div class="model-frame">
+      <model-viewer
+        src="../assets/models/UPDATE_ME.glb"
+        alt="3D model of UPDATE_ME"
+        camera-controls
+        auto-rotate
+        shadow-intensity="1"
+        style="width: 100%; height: 100%;">
+      </model-viewer>
+    </div>
+    <p class="model-hint">Drag to rotate &middot; scroll to zoom</p>
+  </section>
+ 
+  <!-- ============================================================ -->
+  <!-- RESEARCH PAPER                                                -->
+  <!-- Drop your PDF into /assets/papers/ and update the path below. -->
+  <!-- If this project has no paper, delete this whole <section>.    -->
+  <!-- ============================================================ -->
+  <section class="project-page-section">
+    <h2 class="project-page-subhead">Paper</h2>
+    <div class="pdf-frame">
+      <iframe src="../assets/papers/UPDATE_ME.pdf" title="Project paper" loading="lazy"></iframe>
+    </div>
+    <a class="project-link" href="../assets/papers/UPDATE_ME.pdf" target="_blank" rel="noopener">Download the PDF &rarr;</a>
+  </section>
+ 
+  <!-- ============================================================ -->
+  <!-- FULL REPO LINK                                                -->
+  <!-- ============================================================ -->
+  <section class="project-page-section project-page-repo">
+    <h2 class="project-page-subhead">Full Workflow &amp; Files</h2>
+    <p class="section-lede">CAD drawings, ANSYS setup, meshing, and analysis files are all in the full repository.</p>
+    <!-- UPDATE_ME -->
+    <a class="btn btn-primary" href="https://github.com/UPDATE_ME/UPDATE_ME" target="_blank" rel="noopener">View full GitHub repo &rarr;</a>
+  </section>
+ 
+</main>
+ 
+<footer class="site-footer">
+  <p class="footer-meta">&copy; <span id="year"></span> JC.</p>
+</footer>
+ 
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+ 
