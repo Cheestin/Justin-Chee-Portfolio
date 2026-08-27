@@ -110,11 +110,8 @@ const projectGrid = document.querySelector('.project-grid');
 
 if (projectGrid) {
   projectGrid.addEventListener('wheel', (e) => {
-    // Convert vertical mouse-wheel movement into horizontal scrolling
-    if (Math.abs(e.deltaY) >= Math.abs(e.deltaX)) {
-      e.preventDefault();
-      projectGrid.scrollLeft += e.deltaY;
-    }
+    e.preventDefault();
+    projectGrid.scrollLeft += e.deltaY;
   }, { passive: false });
 }
 
