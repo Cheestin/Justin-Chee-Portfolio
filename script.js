@@ -110,11 +110,14 @@ const projectGrid = document.querySelector('.project-grid');
 
 if (projectGrid) {
   projectGrid.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+      return;
+    }
+
     e.preventDefault();
     projectGrid.scrollLeft += e.deltaY;
   }, { passive: false });
 }
-
 // =====================================================================
 // Footer year
 // =====================================================================
