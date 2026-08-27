@@ -1,11 +1,22 @@
 // =====================================================================
+// Mobile menu toggle
+// (declared before the tab logic below, since activateTab() references
+// navToggle when closing the mobile menu on tab select)
+// =====================================================================
+const header = document.querySelector('.site-header');
+const navToggle = document.querySelector('.nav-toggle');
+navToggle.addEventListener('click', () => {
+  const isOpen = header.classList.toggle('is-open');
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+// =====================================================================
 // Tab navigation
 // Shows/hides the four tab-panels and keeps the URL hash in sync so
 // tabs are linkable and the back/forward buttons work.
 // =====================================================================
 const tabButtons = document.querySelectorAll('.tab-btn');
 const tabPanels = document.querySelectorAll('.tab-panel');
-const header = document.querySelector('.site-header');
 
 function activateTab(targetId, updateHash = true) {
   tabButtons.forEach((btn) => {
@@ -48,15 +59,6 @@ const initialTab = window.location.hash.replace('#', '') || 'summary';
 if (document.getElementById(initialTab)) {
   activateTab(initialTab, false);
 }
-
-// =====================================================================
-// Mobile menu toggle
-// =====================================================================
-const navToggle = document.querySelector('.nav-toggle');
-navToggle.addEventListener('click', () => {
-  const isOpen = header.classList.toggle('is-open');
-  navToggle.setAttribute('aria-expanded', String(isOpen));
-});
 
 // =====================================================================
 // Contact form — submits via fetch so the page never navigates away.
