@@ -110,9 +110,8 @@ const projectGrid = document.querySelector('.project-grid');
 
 if (projectGrid) {
   projectGrid.addEventListener('wheel', (e) => {
-    // Only take over vertical scroll gestures; let horizontal trackpad
-    // swipes pass through untouched.
-    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+    // Convert vertical mouse-wheel movement into horizontal scrolling
+    if (Math.abs(e.deltaY) >= Math.abs(e.deltaX)) {
       e.preventDefault();
       projectGrid.scrollLeft += e.deltaY;
     }
