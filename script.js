@@ -110,14 +110,15 @@ const projectGrid = document.querySelector('.project-grid');
 
 if (projectGrid) {
   projectGrid.addEventListener('wheel', (e) => {
-    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
-      return;
+    // Only take over vertical scroll gestures; let horizontal trackpad
+    // swipes pass through untouched.
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      e.preventDefault();
+      projectGrid.scrollLeft += e.deltaY;
     }
-
-    e.preventDefault();
-    projectGrid.scrollLeft += e.deltaY;
   }, { passive: false });
 }
+
 // =====================================================================
 // Footer year
 // =====================================================================
