@@ -86,7 +86,7 @@ if (contactForm) {
       });
 
       if (response.ok) {
-        formStatus.textContent = "Thanks — your message has been sent. I'll get back to you soon.";
+        formStatus.textContent = "Thank you for your message, I will be in touch shortly.";
         formStatus.classList.add('is-success');
         contactForm.reset();
       } else {
