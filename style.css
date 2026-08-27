@@ -306,6 +306,29 @@ main {
   font-size: 0.95rem;
 }
 
+.about-more {
+  margin: 56px auto 0;
+  max-width: 62ch;
+}
+
+.about-more-title {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.about-more-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--ink);
+}
+.about-more-text + .about-more-text {
+  margin-top: 16px;
+}
+
 /* =================================================================
    SKILLS
    ================================================================= */
@@ -343,9 +366,31 @@ main {
    PROJECTS
    ================================================================= */
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 12px;
+  /* Extends the row edge-to-edge past the centered content column so cards
+     can scroll under the page margins. Remove this block if you'd rather
+     keep the row inside the normal content width. */
+  margin: 0 calc(-1 * 24px);
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.project-grid::-webkit-scrollbar {
+  height: 6px;
+}
+.project-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+.project-grid::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 999px;
+}
+.project-grid::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }
 
 .project-card {
@@ -357,6 +402,8 @@ main {
   flex-direction: column;
   gap: 10px;
   transition: border-color 0.15s ease, transform 0.15s ease;
+  flex: 0 0 320px;
+  scroll-snap-align: start;
 }
 
 .project-card:hover {
@@ -686,7 +733,7 @@ main {
   max-width: 720px;
   width: 100%;
   margin: 0 auto 14px;
-  aspect-ratio: 8.5 / 5.5;
+  aspect-ratio: 8.5 / 11;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
@@ -732,7 +779,7 @@ main {
   .quick-facts { grid-template-columns: repeat(2, 1fr); }
   .fact:nth-child(3) { border-left: none; }
   .skill-groups { grid-template-columns: 1fr; }
-  .project-grid { grid-template-columns: 1fr; }
+  /* .project-grid is a horizontal scroll row now, so no column override needed here */
   .contact-layout { grid-template-columns: 1fr; }
 }
 
