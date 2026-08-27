@@ -794,7 +794,7 @@ main {
     flex-direction: column;
     width: 100%;
     order: 3;
-    padding-top: 12px;
+    padding-top: 10px;
     gap: 2px;
   }
   .site-header.is-open .tab-btn { text-align: left; border-radius: 6px; }
