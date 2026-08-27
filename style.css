@@ -369,15 +369,15 @@ main {
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+
   padding-top: 8px;
   padding-bottom: 12px;
-  /* Extends the row edge-to-edge past the centered content column so cards
-     can scroll under the page margins. Remove this block if you'd rather
-     keep the row inside the normal content width. */
-  margin: 0 calc(-1 * 24px);
   padding-left: 24px;
   padding-right: 24px;
+
+  margin: 0 calc(-1 * 24px);
 }
 
 .project-grid::-webkit-scrollbar {
@@ -404,7 +404,6 @@ main {
   gap: 10px;
   transition: border-color 0.15s ease, transform 0.15s ease;
   flex: 0 0 320px;
-  scroll-snap-align: start;
 }
 
 .project-card:hover {
