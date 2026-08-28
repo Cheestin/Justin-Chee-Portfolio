@@ -404,6 +404,7 @@ main {
   gap: 10px;
   transition: border-color 0.15s ease, transform 0.15s ease;
   flex: 0 0 320px;
+  scroll-snap-align: start;
 }
 
 .project-card:hover {
@@ -520,6 +521,17 @@ main {
   position: absolute;
   left: 0;
   color: var(--line);
+}
+
+.reference-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent-ink);
+}
+.reference-link:hover {
+  text-decoration: underline;
 }
 
 /* =================================================================
