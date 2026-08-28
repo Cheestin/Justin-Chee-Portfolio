@@ -589,6 +589,13 @@ main {
 }
 .contact-info-list a:hover { color: var(--accent-ink); }
 
+.quiet-note {
+  margin-top: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
 .contact-form-wrap {
   width: 100%;
 }
