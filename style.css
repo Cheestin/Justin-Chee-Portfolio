@@ -404,7 +404,6 @@ main {
   gap: 10px;
   transition: border-color 0.15s ease, transform 0.15s ease;
   flex: 0 0 320px;
-  scroll-snap-align: start;
 }
 
 .project-card:hover {
