@@ -750,7 +750,7 @@ main {
   max-width: 720px;
   width: 100%;
   margin: 0 auto 14px;
-  aspect-ratio: 8.5 / 11;
+  aspect-ratio: 8.5 / 5.5;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
