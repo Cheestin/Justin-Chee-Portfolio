@@ -701,7 +701,7 @@ main {
 }
 
 .project-page-title {
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-size: clamp(1.6rem, 3.5vw, 2.3rem);
   font-weight: 700;
   margin-bottom: 16px;
 }
