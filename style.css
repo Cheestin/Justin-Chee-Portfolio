@@ -709,7 +709,7 @@ main {
 .project-page-overview {
   color: var(--muted);
   font-size: 0.95rem;
-  max-width: 85ch;
+  max-width: 900px;
   margin: 0 auto 16px;
   text-align: justify;
 }
