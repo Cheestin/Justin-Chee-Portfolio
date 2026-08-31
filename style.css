@@ -708,9 +708,10 @@ main {
 
 .project-page-overview {
   color: var(--muted);
-  font-size: 1.02rem;
-  max-width: 70ch;
+  font-size: 0.95rem;
+  max-width: 85ch;
   margin: 0 auto 16px;
+  text-align: justify;
 }
 
 .project-page-header .project-stack {
