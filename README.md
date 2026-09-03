@@ -17,7 +17,7 @@ Check out my portfolio online:
 <p>│ ├── Papers (Write Ups and Reports)</p>
 <p>│ ├── References (Letters of Reference)</p>
 <p>├── Projects/ (Portfolio subpages)</p>
-<p>└── README.md  (This file)</p>
-<p>├── index.html (Main portfolio webpage)</p>
+<p>├── README.md  (This file)</p>
+<p>└── index.html (Main portfolio webpage)</p>
 
 ---
