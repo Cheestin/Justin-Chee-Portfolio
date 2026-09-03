@@ -6,7 +6,7 @@ Welcome to my Engineering Portfolio! This repository hosts my professional portf
 
 ## Live Website
 
-Check out my portfolio online:  
+Find out more about me on my Portfolio:  
 [https://cheestin.github.io/Justin-Chee-Portfolio/index.html]( https://cheestin.github.io/Justin-Chee-Portfolio/index.html)
 
 ---
