@@ -321,9 +321,9 @@ main {
 }
 
 .about-more-text {
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   line-height: 1.75;
-  color: var(--ink);
+  color: var(--muted);
 }
 .about-more-text + .about-more-text {
   margin-top: 16px;
